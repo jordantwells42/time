@@ -18,8 +18,8 @@ const Home: NextPage = () => {
   console.log(scale)
 
   function calculateColor (time: DateTime) {
-    const hmsTime = parseInt(time.toFormat('HHmmss'), 16)*5
-    const mdyTime = parseInt(time.plus({days:1}).toFormat('MMddyy'), 16)*5
+    const hmsTime = parseInt(time.toFormat('HHmmss'), 16)
+    const mdyTime = parseInt(time.plus({days:1}).toFormat('MMddyy'), 16)*13
     const calculatedColor =
       '#' + ((hmsTime + mdyTime) % parseInt('FFFFFF', 16)).toString(16)
     console.log(calculatedColor)
